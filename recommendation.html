@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Recommendation engine</title>
+<body style="background-color:powderblue">
+<h1><center style="color:#0000ff">Recommendation engine</center></h1>
+<form action="{{ url_for('predict')}}" method="POST">
+  <br><br>
+  <label for="user"><b>Enter the user name:</b></label><br>
+  <input type="text" id="user" name="user"><br><br>
+  <input type="submit" value="predict" style="background-color: yellow">
+ 
+</form>
+</body>
+</head>
+</html>
