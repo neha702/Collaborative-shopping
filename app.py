@@ -9,14 +9,12 @@ Original file is located at
 
 #app.py
 from flask import Flask, jsonify, request, render_template
-from flask_ngrok import run_with_ngrok
 import pickle
 
 # load model
 models = pickle.load(open('model.pkl','rb'))
 # app
 app = Flask(__name__,template_folder='template')
-run_with_ngrok(app)
 @app.route('/')
 def home():
     return render_template('recommendation.html')
