@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/11EuFY_sRu17wYAiX2jdBsp53yanvQsEp
 """
 
-pip install flask-ngrok
-
 #app.py
 from flask import Flask, jsonify, request, render_template
 from flask_ngrok import run_with_ngrok
