@@ -19,7 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Data outlook
-data =pd.read_csv('/content/Users_likes_Dislikes_list.csv')
+data =pd.read_csv('Users_likes_Dislikes_list.csv')
 data.head(15)
 
 #Timestamp column is of no use to us, so we will drop it
