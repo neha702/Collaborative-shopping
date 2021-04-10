@@ -14,7 +14,7 @@ import pickle
 # load model
 models = pickle.load(open('model.pkl','rb'))
 # app
-app = Flask(__name__,template_folder='template')
+app = Flask(__name__,template_folder='templates')
 @app.route('/')
 def home():
     return render_template('recommendation.html')
