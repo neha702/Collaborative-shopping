@@ -69,13 +69,7 @@ similarity=similarity[index]
 neighbours = similarity[similarity[:,1].astype(float) > 0.5]
 
 #Printing the top 10 neighbours of any user( taking here Neha Das)
-print('Suggested friends for Neha Das are(based on your choices):')
-if (len(neighbours)>10):
-   for i in range(0,10,1):  #Top 10 neighbours
-       print(neighbours[i][0])   
-else:
-    for i in range(len(neighbours)):
-       print(neighbours[i][0])
+
 
 #Function to find top users and similar items
 def model(user):
@@ -104,18 +98,7 @@ def model(user):
     return top_list,recommended_array
 
 #Displaying the model result.
-user = input("Enter the user name: ")
-top_lists,recommendation_list=model(user)
-print(" ")
-print("Top users similar to this user are:")
-print(" ")
-for i in range(0,len(top_lists),1):
-    print(top_lists[i])
-print(" ")
-print("Users similar to this user liked these products too:")
-print(" ")
-for i in range(0,len(recommendation_list),1):
-  print(recommendation_list[i])
+
 
 """**Pickling the model**"""
 
@@ -123,19 +106,7 @@ import pickle
 
 #pickling the model
 pickle.dump(model,open("model.pkl", 'wb'))
-c='Sreeja Kadari'
-jb=pickle.load(open("model.pkl","rb"))
-top_list,recommended_list=jb(c)
-print(" ")
-print("Top users similar to this user are:")
-print(" ")
-for i in range(0,len(top_list),1):
-    print(top_list[i])
-print(" ")
-print("Users similar to this user liked these products too:")
-print(" ")
-for i in range(0,len(recommended_list),1):
-  print(recommended_list[i])
+
 
 """**Deploying model**
 
